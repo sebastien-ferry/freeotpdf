@@ -33,12 +33,15 @@ pdf.alias_nb_pages()
 pdf.add_page()
 
 # File format is:
-#    otpauth://totp/seby%40127.1
-#    ?secret=EUYRNTKIPJWHVLU7OTSBV47P
+#    otpauth://totp/user%40service
+#    ?secret=AAAAAAAAAAAAAAAAAAAAAAAA
 #    &issuer=
 #    &algorithm=SHA1&digits=6&period=30
 line_index = 0
 for line in content:
+    if line[0:15] != "otpauth://totp/":
+        continue
+
     print("")
     line_index = line_index + 1
 
