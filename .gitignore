@@ -1,0 +1,15 @@
+# Secrets and stuff
+freeotp-backup.txt
+*.txt
+freeotp-backup.pdf
+*.pdf
+*.png
+
+# Virtualenv
+bin
+include
+lib
+lib64
+
+# temporary stuff
+tmp/*.png
